@@ -4,7 +4,7 @@ import fs from "node:fs";
 const server = http.createServer((req, res) => {
 
   if (req.url === "/styles.css") {
-    fs.readFile("./styles.css", (err, data) => {
+    fs.readFile("./public/styles.css", (err, data) => {
       if (err) {
         console.error(err);
         res.end();
